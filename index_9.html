@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <title>Crilles övningar - ÅTTA</title>
+    <title>Crilles övningar - NIO</title>
 </head>
 
 <body>
@@ -32,7 +32,7 @@
             <li><a href="index_17.html">Övning 17</a></li>
         </ul>
     </nav>
-    <h1>Ändra typsnitt på sidan!</h1>
+    <h1>Ändra både typsnitt och dess storlek på sidan!</h1>
     <form action="">
         <h2>Välj typsnitt:</h2>
         <select onchange="changeFont(this);" size="14">
@@ -50,16 +50,32 @@
             <option>Courier New</option>
             <option>Lucida Console</option>
         </select>
+        <label for="user-size">Välj en siffra mellan 10 och 48 för storlek:</label>
+        <input type="number" id="user-size">
+        <button type="button" onclick="changeSize()">Spara</button>
     </form>
     <div id="output">
         Bra val! Så här ser ditt typsnitt ut!
     </div>
     <script>
         // använde denna guide: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_style_fontfamily2
+        // rensa input och bakgrundsfärg
+        function clearAll() {
+            document.querySelector('input').value = '';
+            document.querySelector('body').style.backgroundColor = 'inherit'
+        }
+
         // ändra typsnitt enligt vad användaren valt
         function changeFont(selectTag) {
             let listValue = selectTag.options[selectTag.selectedIndex].text;
-            document.getElementById('output').style.fontFamily = listValue;
+            
+            document.getElementById('output').style.fontFamily = listValue
+            
+        }
+        // ändra fontstorlek enligt vad användaren valt
+        function changeSize () {
+            let userSize = parseInt(document.getElementById('user-size').value)
+            document.getElementById('output').style.fontSize = userSize + 'px';
         }
     </script>
 </body>
