@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Crilles övningar - SEX</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <li><a href="index_1.html">Övning 1</a></li>
+            <li><a href="index_2.html">Övning 2</a></li>
+            <li><a href="index_3.html">Övning 3</a></li>
+            <li><a href="index_4.html">Övning 4</a></li>
+            <li><a href="index_5.html">Övning 5</a></li>
+            <li><a href="index_6.html">Övning 6</a></li>
+            
+        </ul>
+    </nav>
+    <h1>Öppna nytt fönster i webbläsaren</h1>
+    <form action="">
+        <button type="button" id="store" onclick="openWindow()">Öppna</button>
+        <button type="button" id="restart" onclick="clearAll()">Börja om</button>
+    </form>
+    <script>
+        // rensa input
+        function clearAll() {
+            document.querySelector('input').value = '';
+        }
+
+        // öppna nytt fönster i webbläsaren
+        function openWindow () {
+        window.open()
+        }
+    </script>
+</body>
+</html>
