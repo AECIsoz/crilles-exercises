@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Crilles övningar - FEM</title>
+</head>
+<body>
+    <h1>Skriv ditt namn i rutan!</h1>
+    <form action="">
+        <h2>Ditt namn kommer att synas i titelfältet</h2>
+        <input type="text" name="text-string" id="user-name">
+        <button type="button" id="store" onclick="storeInput()">Spara</button>
+        <button type="button" id="restart" onclick="clearAll()">Börja om</button>
+    </form>
+    <div id="output"></div>
+    <script>
+        function storeInput () {
+        let userName = document.getElementById('user-name').value;
+        console.log(userName)
+        let pageTitle = document.querySelector('title').innerHTML
+        console.log(pageTitle)
+        pageTitle += '- ' + userName;
+        document.getElementById('output').innerHTML = pageTitle;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Crilles övningar - FYRA</title>
+</head>
+
+<body>
+    <h1>Ge mig några ord att spara!</h1>
+    <form action="">
+        <h2>Skriv ett ord i varje ruta</h2>
+        <input type="text" name="text-string" id="word-one">
+        <input type="text" name="text-string" id="word-two">
+        <input type="text" name="text-string" id="word-three">
+        <input type="text" name="text-string" id="word-four">
+        <input type="text" name="text-string" id="word-five">
+        <button type="button" id="store" onclick="storeInput()">Spara</button>
+        <button type="button" id="restart" onclick="clearAll()">Börja om</button>
+    </form>
+    <div id="output"></div>
+    <script>
+        // rensa formuläret och output
+        function clearAll() {
+            document.querySelector('form').reset();
+            document.getElementById('output').innerHTML = "";
+        }
+
+        // spara input-orden i varsin variabel, spara variablerna i en array och skriv ut på skärmen
+
+        function storeInput() {
+            let wordOne = document.getElementById('word-one').value;
+            let wordTwo = document.getElementById('word-two').value;
+            let wordThree = document.getElementById('word-three').value;
+            let wordFour = document.getElementById('word-four').value;
+            let wordFive = document.getElementById('word-five').value;
+            let myString = wordOne.concat(" ", wordTwo, " ", wordThree, " ", wordFour, " ", wordFive)
+            let myArray = [];
+            myArray = myString.split(' ')
+            console.log(myArray)
+            document.getElementById('output').innerHTML = myArray
+        }
+
+
+    </script>
+</body>
+
+</html>

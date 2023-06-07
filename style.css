@@ -1,0 +1,32 @@
+h2 {
+    color: white;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    background-color: cadetblue;
+}
+
+form, #output {
+    width: 400px;
+    padding: 20px;
+}
+
+button {
+    width: 100px;
+    margin: 10px 0;
+    padding: 5px;
+    background-color: lightcyan;
+}
+
+label {
+    color: white;
+    margin-bottom: 5px;
+}
+
+#output {
+    margin-top: 10px;
+    background-color: rgb(250, 96, 40);
+    color: white;
+}

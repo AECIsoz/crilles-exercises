@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crilles övningar - TVÅ</title>
+</head>
+<body>
+    <h1>Vilket räknesätt vill du ha?</h1>
+    <input type="radio" value="+" name="method">Addera
+    <input type="radio" value="
+    -" name="method">Subtrahera
+    <input type="radio" value="*" name="method">Multiplicera
+    <input type="radio" value="/" name="method">Dividera
+    <button type="button" id="btn" onclick="doMath()">Välj</button>
+    <div id="result"></div>
+    <script>
+        let numOne = 12;
+        let numTwo = 8;
+        let result;
+        let selectedMethod;
+        // spara radioknapparna i en variabel
+        const radioButtons = document.querySelectorAll('input[name="method"]');
+        
+        // en funktion för att se vilken knapp som är vald, utföra den uträkningen och skriva ut resultatet på skärmen.
+        function doMath () {
+            for (const radioButton of radioButtons) {
+                if(radioButton.checked) {
+                    selectedMethod = radioButton.value;
+                break;
+                console.log(selectedMethod)
+                }
+            }
+            result = eval(numOne + selectedMethod + numTwo); 
+            console.log(result)
+            document.getElementById('result').innerHTML = 'Du valde ' + selectedMethod + ' och resultatet av uträkningen blir ' + result;
+        }
+    </script>
+</body>
+</html>
