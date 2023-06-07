@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Crilles övningar - ÅTTA</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index_1.html">Övning 1</a></li>
+            <li><a href="index_2.html">Övning 2</a></li>
+            <li><a href="index_3.html">Övning 3</a></li>
+            <li><a href="index_4.html">Övning 4</a></li>
+            <li><a href="index_5.html">Övning 5</a></li>
+            <li><a href="index_6.html">Övning 6</a></li>
+            <li><a href="index_7.html">Övning 7</a></li>
+            <li><a href="index_8.html">Övning 8</a></li>
+            <li><a href="index_9.html">Övning 9</a></li>
+            <li><a href="index_10.html">Övning 10</a></li>
+            <li><a href="index_11.html">Övning 11</a></li>
+            <li><a href="index_12.html">Övning 12</a></li>
+            <li><a href="index_13.html">Övning 13</a></li>
+            <li><a href="index_14.html">Övning 14</a></li>
+            <li><a href="index_15.html">Övning 15</a></li>
+            <li><a href="index_16.html">Övning 16</a></li>
+            <li><a href="index_17.html">Övning 17</a></li>
+        </ul>
+    </nav>
+    <h1>Ändra typsnitt på sidan!</h1>
+    <form action="">
+        <h2>Välj typsnitt:</h2>
+        <select onchange="changeFont(this);" size="14">
+            <option value="">Georgia</option>
+            <option value="">Palatino Linotype</option>
+            <option value="">Book Antiqua</option>
+            <option>Times New Roman</option>
+            <option>Arial</option>
+            <option>Helvetica</option>
+            <option>Arial Black</option>
+            <option>Impact</option>
+            <option>Lucida Sans Unicode</option>
+            <option>Tahoma</option>
+            <option>Verdana</option>
+            <option>Courier New</option>
+            <option>Lucida Console</option>
+        </select>
+    </form>
+    <div id="output">
+        Bra val! Så här ser ditt typsnitt ut!
+    </div>
+    <script>
+        // använde denna guide: https://www.w3schools.com/jsref/tryit.asp?filename=tryjsref_style_fontfamily2
+        // rensa input och bakgrundsfärg
+        function clearAll() {
+            document.querySelector('input').value = '';
+            document.querySelector('body').style.backgroundColor = 'inherit'
+        }
+
+        // ändra bakgrundsfärg enligt vad användaren valt
+        function changeFont(selectTag) {
+            let listValue = selectTag.options[selectTag.selectedIndex].text;
+            document.getElementById('output').style.fontFamily = listValue;
+        }
+    </script>
+</body>
+
+</html>
