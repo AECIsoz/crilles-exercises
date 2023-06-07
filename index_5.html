@@ -27,15 +27,16 @@
         <button type="button" id="store" onclick="storeInput()">Spara</button>
         <button type="button" id="restart" onclick="clearAll()">Börja om</button>
     </form>
-    <div id="output"></div>
     <script>
+        // rensa input
+        function clearAll() {
+            document.querySelector('input').value = '';
+        }
+
+        // ändra document title till användarnamnet
         function storeInput () {
         let userName = document.getElementById('user-name').value;
-        console.log(userName)
-        let pageTitle = document.querySelector('title').innerHTML
-        console.log(pageTitle)
-        pageTitle += '- ' + userName;
-        document.getElementById('output').innerHTML = pageTitle;
+        document.title = userName
         }
     </script>
 </body>
