@@ -1,15 +1,13 @@
 <!DOCTYPE html>
 <html lang="sv">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="style.css">
-    <title>Crilles övningar - FEM</title>
+    <title>Crilles övningar - SJU</title>
 </head>
-
 <body>
     <nav>
         <ul>
@@ -32,25 +30,26 @@
             <li><a href="index_17.html">Övning 17</a></li>
         </ul>
     </nav>
-    <h1>Skriv ditt namn i rutan!</h1>
+    <h1>Ändra bakgrundsfärg på sidan!</h1>
     <form action="">
-        <h2>Ditt namn kommer att synas i titelfältet</h2>
-        <input type="text" name="text-string" id="user-name">
-        <button type="button" id="store" onclick="storeInput()">Spara</button>
+        <h2>Välj färg:</h2>
+        <input type="color" id="user-color">
+        <button type="button" id="store" onclick="storeInput()">Byt färg</button>
         <button type="button" id="restart" onclick="clearAll()">Börja om</button>
     </form>
     <script>
-        // rensa input
+        // rensa input och bakgrundsfärg
         function clearAll() {
             document.querySelector('input').value = '';
+            document.querySelector('body').style.backgroundColor = 'inherit'
         }
 
-        // ändra document title till användarnamnet
-        function storeInput() {
-            let userName = document.getElementById('user-name').value;
-            document.title = userName
+        // ändra bakgrundsfärg enligt vad användaren valt
+        function storeInput () {
+        let userColor = document.getElementById('user-color').value;
+        console.log(userColor)
+        document.querySelector('body').style.backgroundColor = userColor;
         }
     </script>
 </body>
-
 </html>
