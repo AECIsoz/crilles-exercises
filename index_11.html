@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="sv">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="reset.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Crilles övningar - ELVA</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <li><a href="index_1.html">Övning 1</a></li>
+            <li><a href="index_2.html">Övning 2</a></li>
+            <li><a href="index_3.html">Övning 3</a></li>
+            <li><a href="index_4.html">Övning 4</a></li>
+            <li><a href="index_5.html">Övning 5</a></li>
+            <li><a href="index_6.html">Övning 6</a></li>
+            <li><a href="index_7.html">Övning 7</a></li>
+            <li><a href="index_8.html">Övning 8</a></li>
+            <li><a href="index_9.html">Övning 9</a></li>
+            <li><a href="index_10.html">Övning 10</a></li>
+            <li><a href="index_11.html">Övning 11</a></li>
+            <li><a href="index_12.html">Övning 12</a></li>
+            <li><a href="index_13.html">Övning 13</a></li>
+            <li><a href="index_14.html">Övning 14</a></li>
+            <li><a href="index_15.html">Övning 15</a></li>
+            <li><a href="index_16.html">Övning 16</a></li>
+            <li><a href="index_17.html">Övning 17</a></li>
+        </ul>
+    </nav>
+    <h1>Samla in data om användarens persondator</h1>
+    <form>
+        <label for="brand">Vilket märke har din dator?</label>
+        <input type="text" id="brand">
+        <label for="memory">Hur stort minne har din dator?</label>
+        <select name="memory" id="memory">
+            <option value="" selected disabled hidden>Välj:</option>
+            <option value="32">32</option>
+            <option value="64">64</option>
+            <option value="128">128</option>
+        </select>
+        <label for="year">Vilket år är din dator tillverkad?</label>
+        <input type="number" placeholder="YYYY" min="1980" max="2023" id="year">
+        <button type="button" onclick="displayResult()">Spara</button>
+    </form>
+
+    <div id="output">
+        <h4 id="output-brand">Du angav märke: </h4>
+        <h4 id="output-memory">Du angav minne: </h4>
+        <h4 id="output-year">Du angav år: </h4>
+    </div>
+
+    <script>
+
+        function displayResult () {
+            let brand = document.getElementById('brand').value 
+            console.log(brand)
+            let memory = document.getElementById('memory').value
+            console.log(memory)
+            let year = document.getElementById('year').value
+            console.log(year)
+
+            document.getElementById('output-brand').innerHTML += brand
+            console.log(document.getElementById('output-brand').innerHTML)
+            document.getElementById('output-memory').innerHTML += memory
+            document.getElementById('output-year').innerHTML += year
+        }
+
+    </script>
+</body>
+
+</html>
