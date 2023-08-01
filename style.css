@@ -63,3 +63,18 @@ label {
     background-color: rgb(250, 96, 40);
     color: white;
 }
+
+/* övning 10 */
+
+#image-container {
+    position: relative;
+}
+
+#display-image {
+    border: 5px solid black;
+    border-radius: 5px;
+    width: 400px;
+    margin-left: 50px;
+}
+
+
